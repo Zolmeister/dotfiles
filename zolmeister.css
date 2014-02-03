@@ -1,0 +1,35 @@
+@import url(http://fonts.googleapis.com/css?family=Ubuntu+Mono);
+.cm-s-zolmeister.CodeMirror {
+  background: #272822; color: #f8f8f2;
+  font-family:'Ubuntu Mono', monospace;
+  line-height: 1.2em;
+}
+.cm-s-zolmeister div.CodeMirror-selected {background: #49483E !important;}
+.cm-s-zolmeister .CodeMirror-gutters {background: #272822; border: 1px solid rgba(0,0,0,.25);}
+.cm-s-zolmeister .CodeMirror-gutter-text {color: #d0d0d0;}
+.cm-s-zolmeister .CodeMirror-cursor {border-left: 1px solid #f8f8f0 !important;}
+
+.cm-s-zolmeister span.cm-comment {color: #75715e;}
+.cm-s-zolmeister span.cm-atom {color: #ae81ff;}
+.cm-s-zolmeister span.cm-number {color: #ae81ff;}
+
+.cm-s-zolmeister span.cm-property, .cm-s-zolmeister span.cm-attribute {color: #a6e22e;}
+.cm-s-zolmeister span.cm-keyword {color: #f92672;}
+.cm-s-zolmeister span.cm-string {color: #e6db74;}
+
+.cm-s-zolmeister span.cm-variable {color: #a6e22e;}
+.cm-s-zolmeister span.cm-variable-2 {color: #9effff;}
+.cm-s-zolmeister span.cm-def {color: #fd971f;}
+.cm-s-zolmeister span.cm-error {background: #f92672; color: #f8f8f0;}
+.cm-s-zolmeister span.cm-bracket {color: #f8f8f2;}
+.cm-s-zolmeister span.cm-tag {color: #f92672;}
+.cm-s-zolmeister span.cm-link {color: #ae81ff;}
+
+.cm-s-zolmeister .CodeMirror-matchingbracket {
+  text-decoration: underline;
+  color: white !important;
+}
+
+.cm-s-zolmeister span.CodeMirror-matchingtag {
+	background: rgba(255, 255, 255, 0.05);
+}
