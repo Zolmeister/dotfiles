@@ -38,6 +38,11 @@ plugins=(git)
 source $ZSH/oh-my-zsh.sh
 unsetopt correct_all
 
+# History
+SAVEHIST=100000000
+unsetopt hist_expire_dups_first
+unsetopt hist_ignore_dups
+
 encode64(){ echo -n $1 | base64 }
 decode64(){ echo -n $1 | base64 -D }
 alias e64=encode64
