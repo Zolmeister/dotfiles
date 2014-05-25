@@ -57,6 +57,7 @@ alias -g ...='../..'
 alias -g ....='../../..'
 alias -g .....='../../../..'
 alias lighttable='~/Documents/LightTable/./LightTable'
+alias bower='noglob bower'
 
 source /usr/local/bin/virtualenvwrapper.sh
 export Websites=/home/zoli/workspace/websites
