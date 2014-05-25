@@ -42,6 +42,8 @@ unsetopt correct_all
 SAVEHIST=100000000
 unsetopt hist_expire_dups_first
 unsetopt hist_ignore_dups
+unsetopt inc_append_history
+unsetopt share_history
 
 encode64(){ echo -n $1 | base64 }
 decode64(){ echo -n $1 | base64 -D }
