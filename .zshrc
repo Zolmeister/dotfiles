@@ -55,7 +55,7 @@ alias -g ....='../../..'
 alias -g .....='../../../..'
 alias bower='noglob bower'
 alias pm-suspend='/usr/sbin/pm-suspend'
-alias susp='i3lock -c 000000 && dbus-send --system --print-reply \
+alias susp='i3lock -c 000000 -i ~/Pictures/Z/Z-bg.png && dbus-send --system --print-reply \
     --dest="org.freedesktop.UPower" \
     /org/freedesktop/UPower \
     org.freedesktop.UPower.Suspend'

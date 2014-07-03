@@ -142,7 +142,7 @@ bindsym $mod+r mode "resize"
 # Zolmeister
 # disabled status bar (see above)
 # screen lock with ctrl + sup + l
-bindsym Control+mod4+l exec i3lock -c 000000
+bindsym Control+mod4+l exec i3lock -c 000000 -i ~/Pictures/Z/Z-bg.png
 # set border to 1
 new_window 1pixel
 # hide border if 1 window
@@ -159,6 +159,9 @@ client.focused                #1793D0    #1793D0    #FFFFFF
 client.focused_inactive    #333333    #333333    #999999
 client.unfocused            #333333    #333333    #999999
 client.urgent                #FF0000    #8C5665    #FF0000
+
+# background image
+exec --no-startup-id nitrogen --restore
 
 # fix media keys and gtk theme issues
 exec gnome-settings-daemon &
