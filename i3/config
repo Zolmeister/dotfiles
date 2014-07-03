@@ -159,3 +159,6 @@ client.focused                #1793D0    #1793D0    #FFFFFF
 client.focused_inactive    #333333    #333333    #999999
 client.unfocused            #333333    #333333    #999999
 client.urgent                #FF0000    #8C5665    #FF0000
+
+# fix media keys and gtk theme issues
+exec gnome-settings-daemon
