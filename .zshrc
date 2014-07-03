@@ -50,16 +50,16 @@ decode64(){ echo -n $1 | base64 -D }
 alias e64=encode64
 alias d64=decode64
 
-alias futon='cd ~/Documents/futon4mongo && rackup -p 4567'
-#alias brackets='~/Documents/brackets/./Brackets'
-alias litecoin='~/Documents/litecoin-0.6.3c-linux/bin/64/./litecoin-qt'
 alias -g ...='../..'
 alias -g ....='../../..'
 alias -g .....='../../../..'
-alias lighttable='~/Documents/LightTable/./LightTable'
 alias bower='noglob bower'
+alias pm-suspend='/usr/sbin/pm-suspend'
+alias susp='i3lock -c 000000 && dbus-send --system --print-reply \
+    --dest="org.freedesktop.UPower" \
+    /org/freedesktop/UPower \
+    org.freedesktop.UPower.Suspend'
 
-source /usr/local/bin/virtualenvwrapper.sh
 export Websites=/home/zoli/workspace/websites
 export Home=/mnt/hdd/home/zoli
 export PYLEARN2_DATA_PATH=/data/lisa/data
