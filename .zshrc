@@ -64,6 +64,9 @@ export Websites=/home/zoli/workspace/websites
 export Home=/mnt/hdd/home/zoli
 export PYLEARN2_DATA_PATH=/data/lisa/data
 
+# editor
+export EDITOR="vim"
+
 PATH=/home/zoli/.local/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/usr/include
 
 
