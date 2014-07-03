@@ -59,6 +59,7 @@ alias susp='i3lock -c 000000 && dbus-send --system --print-reply \
     --dest="org.freedesktop.UPower" \
     /org/freedesktop/UPower \
     org.freedesktop.UPower.Suspend'
+alias t='date "+%c"'
 
 export Websites=/home/zoli/workspace/websites
 export Home=/mnt/hdd/home/zoli
