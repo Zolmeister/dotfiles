@@ -162,3 +162,6 @@ client.urgent                #FF0000    #8C5665    #FF0000
 
 # fix media keys and gtk theme issues
 exec gnome-settings-daemon
+
+# fix deb file installation
+exec /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1
