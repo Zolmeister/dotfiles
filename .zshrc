@@ -76,3 +76,18 @@ export PATH="/usr/local/heroku/bin:$PATH:/home/zoli/Documents/adt-linux-64/sdk/p
 
 [[ -s /home/zoli/.nvm/nvm.sh ]] && . /home/zoli/.nvm/nvm.sh # This loads NVM
 
+# powerline-shell
+    function powerline_precmd() {
+      export PS1="$(~/Documents/powerline-shell/powerline-shell.py $? --shell zsh 2> /dev/null)"
+    }
+
+    function install_powerline_precmd() {
+      for s in "${precmd_functions[@]}"; do
+        if [ "$s" = "powerline_precmd" ]; then
+          return
+        fi
+      done
+      precmd_functions+=(powerline_precmd)
+    }
+
+    install_powerline_precmd

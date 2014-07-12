@@ -4,3 +4,5 @@
       | (_| | (_) | |_|  _| | |  __/\__ \
      (_)__,_|\___/ \__|_| |_|_|\___||___/
                                      
+
+Note, powerline-shell must be setup (~/Documents/powerline-shell/powerlineshell.py) or .zshrc will fail
