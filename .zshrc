@@ -91,3 +91,6 @@ export PATH="/usr/local/heroku/bin:$PATH:/home/zoli/Documents/adt-linux-64/sdk/p
     }
 
     install_powerline_precmd
+
+# SSH keyring
+export $(gnome-keyring-daemon --start --components=ssh 2>/dev/null)

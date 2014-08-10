@@ -22,7 +22,7 @@ def get_git_status():
             has_pending_commits = False
         if line.find('Untracked files') >= 0:
             has_untracked_files = True
-        if line.find('Changes to be committe') >= 0:
+        if line.find('Changes to be committed') >= 0 or line.find('Changes not staged for commit') >= 0:
 	    has_untracked_changes = True
     return has_pending_commits, has_untracked_files, origin_position, has_untracked_changes
 
