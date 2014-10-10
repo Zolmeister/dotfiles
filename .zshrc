@@ -94,3 +94,12 @@ export PATH="/usr/local/heroku/bin:$PATH:/home/zoli/Documents/adt-linux-64/sdk/p
 
 # SSH keyring
 export $(gnome-keyring-daemon --start --components=ssh 2>/dev/null)
+
+# Golang
+export GOPATH=$HOME/.local
+
+# Google cloud sdk
+export PATH="$PATH:/home/zoli/Documents/google-cloud-sdk/bin"
+
+# Android SDK
+export PATH="$PATH:/home/zoli/Documents/android-studio/sdk/tools:/home/zoli/Documents/android-studio/sdk/platform-tools"
