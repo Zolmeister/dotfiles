@@ -186,7 +186,3 @@ workspace 12 output DP-2
 # https://code.google.com/p/chromium/issues/detail?id=313391
 bindsym Control+Shift+q exec :
 
-# ncmpcpp media keybindings
-bindsym XF86AudioPlay exec ncmpcpp toggle
-bindsym XF86AudioNext exec ncmpcpp next
-bindsym XF86AudioPrev exec ncmpcpp prev
