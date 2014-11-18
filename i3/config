@@ -185,4 +185,4 @@ workspace 12 output DP-2
 # disable chrome close-all keybinding
 # https://code.google.com/p/chromium/issues/detail?id=313391
 bindsym Control+Shift+q exec :
-
+bindsym Control+Shift+w exec :
