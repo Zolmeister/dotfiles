@@ -5,4 +5,4 @@
      (_)__,_|\___/ \__|_| |_|_|\___||___/
                                      
 
-Note, powerline-shell must be setup (~/Documents/powerline-shell/powerlineshell.py) or .zshrc will fail
+Note, powerline-shell must be setup (~/Documents/powerline-shell/powerline-shell.py) or .zshrc will fail
