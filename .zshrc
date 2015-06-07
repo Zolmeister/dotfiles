@@ -60,6 +60,7 @@ alias susp='i3lock -c 000000 -i ~/Pictures/Z/Z-bg.png && dbus-send --system --pr
     /org/freedesktop/UPower \
     org.freedesktop.UPower.Suspend'
 alias t='date "+%c"'
+alias b='xrandr -q | grep " connected" | cut -d" " -f 1 | xargs -I display xrandr --output display --brightness'
 
 export Websites=/home/zoli/workspace/websites
 export Home=/mnt/hdd/home/zoli
@@ -96,6 +97,8 @@ export PATH="/usr/local/heroku/bin:$PATH:/home/zoli/Documents/adt-linux-64/sdk/p
 export $(gnome-keyring-daemon --start --components=ssh 2>/dev/null)
 
 # Golang
+export GOROOT="/home/zoli/Documents/go"
+export PATH="$PATH:$GOROOT/bin"
 export GOPATH=$HOME/.local
 
 # Google cloud sdk
