@@ -96,6 +96,9 @@ export PATH="/usr/local/heroku/bin:$PATH:/home/zoli/Documents/adt-linux-64/sdk/p
 # SSH keyring
 export $(gnome-keyring-daemon --start --components=ssh 2>/dev/null)
 
+# host aliases
+export HOSTALIASES=~/.hosts
+
 # Golang
 export GOROOT="/home/zoli/Documents/go"
 export PATH="$PATH:$GOROOT/bin"
@@ -106,3 +109,9 @@ export PATH="$PATH:/home/zoli/Documents/google-cloud-sdk/bin"
 
 # Android SDK
 export PATH="$PATH:/home/zoli/Documents/android-studio/sdk/tools:/home/zoli/Documents/android-studio/sdk/platform-tools"
+
+# The next line updates PATH for the Google Cloud SDK.
+source '/home/zoli/google-cloud-sdk/path.zsh.inc'
+
+# The next line enables shell command completion for gcloud.
+source '/home/zoli/google-cloud-sdk/completion.zsh.inc'
