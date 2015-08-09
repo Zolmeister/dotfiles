@@ -19,37 +19,15 @@ unsetopt hist_ignore_dups
 unsetopt inc_append_history
 unsetopt share_history
 
-encode64(){ echo -n $1 | base64 }
-decode64(){ echo -n $1 | base64 -D }
-alias e64=encode64
-alias d64=decode64
-
 alias -g ...='../..'
 alias -g ....='../../..'
 alias -g .....='../../../..'
 alias bower='noglob bower'
-alias pm-suspend='/usr/sbin/pm-suspend'
-alias susp='i3lock -c 000000 -i ~/zolmeister/dotfiles/Z-bg.png && dbus-send --system --print-reply \
-    --dest="org.freedesktop.UPower" \
-    /org/freedesktop/UPower \
-    org.freedesktop.UPower.Suspend'
 alias t='date "+%c"'
 alias b='xrandr -q | grep " connected" | cut -d" " -f 1 | xargs -I display xrandr --output display --brightness'
 
-export Websites=~/workspace/websites
-export Home=/mnt/hdd~
-export PYLEARN2_DATA_PATH=/data/lisa/data
-
 # editor
-export EDITOR="vim"
-
-PATH=~/.local/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/usr/include
-
-
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH:~/Documents/adt-linux-64/sdk/platform-tools:~/Documents/adt-linux-64/sdk/tools"
-
-[[ -s ~/.nvm/nvm.sh ]] && . ~/.nvm/nvm.sh # This loads NVM
+EDITOR="vim"
 
 # powerline-shell
 function powerline_precmd() {
@@ -73,21 +51,20 @@ fi
 export $(gnome-keyring-daemon --start --components=ssh 2>/dev/null)
 
 # host aliases
-export HOSTALIASES=~/.hosts
+HOSTALIASES=~/.hosts
 
 # Golang
-export GOROOT="~/Documents/go"
-export PATH="$PATH:$GOROOT/bin"
-export GOPATH=~/.local
+GOROOT="~/Documents/go"
+GOPATH=~/.local
 
-# Google cloud sdk
-export PATH="$PATH:~/Documents/google-cloud-sdk/bin"
-
-# Android SDK
-export PATH="$PATH:~/Documents/android-studio/sdk/tools:~/Documents/android-studio/sdk/platform-tools"
+PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/usr/include"
+PATH="$PATH:~/.local/bin" # local
+PATH="$PATH:$GOROOT/bin" # go
+PATH="$PATH:~/Documents/google-cloud-sdk/bin" # Google cloud sdk
+PATH="$PATH:~/Documents/android-studio/sdk/tools:~/Documents/android-studio/sdk/platform-tools" # Android SDK
 
 # The next line updates PATH for the Google Cloud SDK.
-#source '~/google-cloud-sdk/path.zsh.inc'
+source ~/google-cloud-sdk/path.zsh.inc
 
 # The next line enables shell command completion for gcloud.
-#source '~/google-cloud-sdk/completion.zsh.inc'
+source ~/google-cloud-sdk/completion.zsh.inc
