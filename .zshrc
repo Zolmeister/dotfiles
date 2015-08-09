@@ -7,7 +7,7 @@ DISABLE_AUTO_UPDATE="true"
 
 # (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git)
+plugins=(git z)
 
 source $ZSH/oh-my-zsh.sh
 unsetopt correct_all
@@ -25,9 +25,10 @@ alias -g .....='../../../..'
 alias bower='noglob bower'
 alias t='date "+%c"'
 alias b='xrandr -q | grep " connected" | cut -d" " -f 1 | xargs -I display xrandr --output display --brightness'
+alias att='atom .'
 
 # editor
-EDITOR="vim"
+EDITOR=vim
 
 # powerline-shell
 function powerline_precmd() {
@@ -54,17 +55,17 @@ export $(gnome-keyring-daemon --start --components=ssh 2>/dev/null)
 HOSTALIASES=~/.hosts
 
 # Golang
-GOROOT="~/Documents/go"
+GOROOT=~/Documents/go
 GOPATH=~/.local
 
-PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/usr/include"
-PATH="$PATH:~/.local/bin" # local
-PATH="$PATH:$GOROOT/bin" # go
-PATH="$PATH:~/Documents/google-cloud-sdk/bin" # Google cloud sdk
-PATH="$PATH:~/Documents/android-studio/sdk/tools:~/Documents/android-studio/sdk/platform-tools" # Android SDK
+PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/usr/include
+PATH=$PATH:~/.local/bin # local
+PATH=$PATH:$GOROOT/bin # go
+PATH=$PATH:~/Documents/google-cloud-sdk/bin # Google cloud sdk
+PATH=$PATH:~/Documents/android-studio/sdk/tools:~/Documents/android-studio/sdk/platform-tools # Android SDK
 
-# The next line updates PATH for the Google Cloud SDK.
-source ~/google-cloud-sdk/path.zsh.inc
-
-# The next line enables shell command completion for gcloud.
+# Google Cloud SDK.
+# https://github.com/GoogleCloudPlatform/gcloud/issues/32
+#source ~/google-cloud-sdk/path.zsh.inc
+PATH=$PATH:~/google-cloud-sdk/bin
 source ~/google-cloud-sdk/completion.zsh.inc
