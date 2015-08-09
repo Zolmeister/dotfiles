@@ -51,9 +51,6 @@ fi
 # SSH keyring
 export $(gnome-keyring-daemon --start --components=ssh 2>/dev/null)
 
-# host aliases
-HOSTALIASES=~/.hosts
-
 # Golang
 GOROOT=~/Documents/go
 GOPATH=~/.local
