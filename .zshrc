@@ -28,7 +28,7 @@ alias b='xrandr -q | grep " connected" | cut -d" " -f 1 | xargs -I display xrand
 alias att='atom .'
 
 # editor
-EDITOR=vim
+export EDITOR=vim
 
 # powerline-shell
 function powerline_precmd() {
