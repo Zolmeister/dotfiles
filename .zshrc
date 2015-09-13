@@ -52,8 +52,8 @@ fi
 export $(gnome-keyring-daemon --start --components=ssh 2>/dev/null)
 
 # Golang
-GOROOT=~/Documents/go
-GOPATH=~/.local
+export GOROOT=~/Documents/go
+export GOPATH=~/.local
 
 PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/usr/include
 PATH=$PATH:~/.local/bin # local
