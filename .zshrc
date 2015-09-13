@@ -60,6 +60,8 @@ PATH=$PATH:~/.local/bin # local
 PATH=$PATH:$GOROOT/bin # go
 PATH=$PATH:~/Documents/google-cloud-sdk/bin # Google cloud sdk
 PATH=$PATH:~/Documents/android-studio/sdk/tools:~/Documents/android-studio/sdk/platform-tools # Android SDK
+PATH=$PATH:~/Documents/fleet/bin
+
 
 # Google Cloud SDK.
 # https://github.com/GoogleCloudPlatform/gcloud/issues/32
