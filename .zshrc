@@ -51,9 +51,16 @@ fi
 # SSH keyring
 export $(gnome-keyring-daemon --start --components=ssh 2>/dev/null)
 
+# cuda
+#export CUDA_HOME=/usr/local/cuda-7.0 
+#export LD_LIBRARY_PATH=${CUDA_HOME}/lib64
+
 # Golang
 export GOROOT=~/Documents/go
 export GOPATH=~/.local
+
+# keras
+export KERAS_BACKEND=tensorflow
 
 PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/usr/include
 PATH=$PATH:~/.local/bin # local

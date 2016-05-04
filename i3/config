@@ -69,6 +69,12 @@ bindsym $mod+a focus parent
 # focus the child container
 #bindcode $mod+d focus child
 
+# media keys
+bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -D pulse sset Master 5%+
+bindsym XF86AudioLowerVolume exec --no-startup-id amixer -D pulse sset Master 5%-
+bindsym XF86AudioMute exec --no-startup-id amixer -D pulse set Master 1+ toggle
+bindsym XF86Sleep exec --no-startup-id systemctl suspend
+
 # switch to workspace
 bindsym $mod+1 workspace 1
 bindsym $mod+2 workspace 2
@@ -169,18 +175,18 @@ exec gnome-settings-daemon &
 exec /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1 &
 
 # assign workspaces to displays
-workspace 1 output DP-4
-workspace 2 output DP-4
-workspace 3 output DP-4
-workspace 4 output DP-4
-workspace 5 output DP-4
-workspace 6 output DP-4
-workspace 7 output DP-4
-workspace 8 output DP-4
+workspace 1 output DP-2
+workspace 2 output DP-2
+workspace 3 output DP-2
+workspace 4 output DP-2
+workspace 5 output DP-2
+workspace 6 output DP-2
+workspace 7 output DP-2
+workspace 8 output DP-2
 workspace 9 output DP-0
-workspace 10 output DP-2
+workspace 10 output DP-4
 workspace 11 output DP-0
-workspace 12 output DP-2
+workspace 12 output DP-4
 
 # disable chrome close-all keybinding
 # https://code.google.com/p/chromium/issues/detail?id=313391
