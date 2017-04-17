@@ -52,8 +52,8 @@ fi
 export $(gnome-keyring-daemon --start --components=ssh 2>/dev/null)
 
 # cuda
-#export CUDA_HOME=/usr/local/cuda-7.0 
-#export LD_LIBRARY_PATH=${CUDA_HOME}/lib64
+export CUDA_HOME=/usr/local/cuda-7.5 
+export LD_LIBRARY_PATH=${CUDA_HOME}/lib64
 
 # Golang
 export GOROOT=~/Documents/go
@@ -75,3 +75,10 @@ PATH=$PATH:~/Documents/fleet/bin
 #source ~/google-cloud-sdk/path.zsh.inc
 PATH=$PATH:~/google-cloud-sdk/bin
 source ~/google-cloud-sdk/completion.zsh.inc
+
+# Java
+export JAVA_HOME=/usr/lib/jvm/default-java
+
+# Android
+export ANDROID_HOME=~/Documents/android
+PATH=$PATH:~/Documents/android/platform-tools
