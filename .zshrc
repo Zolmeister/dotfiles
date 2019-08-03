@@ -49,7 +49,7 @@ if [ "$TERM" != "linux" ]; then
 fi
 
 # SSH keyring
-export $(gnome-keyring-daemon --start --components=ssh 2>/dev/null)
+#export $(gnome-keyring-daemon --start --components=ssh 2>/dev/null)
 
 # cuda
 #export CUDA_HOME=/usr/local/cuda-7.0 
@@ -69,9 +69,20 @@ PATH=$PATH:~/Documents/google-cloud-sdk/bin # Google cloud sdk
 PATH=$PATH:~/Documents/android-studio/sdk/tools:~/Documents/android-studio/sdk/platform-tools # Android SDK
 PATH=$PATH:~/Documents/fleet/bin
 
+# Ruby gems
+PATH=$PATH:~/.gem/ruby/2.3.0/bin
+
 
 # Google Cloud SDK.
 # https://github.com/GoogleCloudPlatform/gcloud/issues/32
 #source ~/google-cloud-sdk/path.zsh.inc
-PATH=$PATH:~/google-cloud-sdk/bin
-source ~/google-cloud-sdk/completion.zsh.inc
+#PATH=$PATH:~/google-cloud-sdk/bin
+#source ~/google-cloud-sdk/completion.zsh.inc
+
+# fix opening new terminal at current location
+if [[ $TERM == xterm-termite ]]; then
+  source /etc/profile.d/vte.sh
+fi
+
+# Yarn
+PATH=$PATH:~/Documents/yarn/dist/bin

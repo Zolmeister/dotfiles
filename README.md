@@ -8,3 +8,5 @@
 mkdir -p ~/zolmeister
 git clone git@github.com:Zolmeister/dotfiles.git ~/zolmeister/dotfiles
 ~/zolmeister/dotfiles/install.sh
+
+TODO: include .xinitrc, and i3lock.service, and publish chrome extensions, and irssi config
