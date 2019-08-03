@@ -26,6 +26,8 @@ alias bower='noglob bower'
 alias t='date "+%c"'
 alias b='xrandr -q | grep " connected" | cut -d" " -f 1 | xargs -I display xrandr --output display --brightness'
 alias att='atom .'
+alias monitor-audio-on='pacmd load-module module-loopback latency_msec=16 source=3 sink=1 channels=2 channel_map=mono,mono'
+alias monitor-audio-off='pacmd unload-module module-loopback'
 
 # editor
 export EDITOR=vim
@@ -68,6 +70,9 @@ PATH=$PATH:$GOROOT/bin # go
 PATH=$PATH:~/Documents/google-cloud-sdk/bin # Google cloud sdk
 PATH=$PATH:~/Documents/android-studio/sdk/tools:~/Documents/android-studio/sdk/platform-tools # Android SDK
 PATH=$PATH:~/Documents/fleet/bin
+PATH=$PATH:~/Documents/ethereum-bin
+# Wine
+PATH=$PATH:/opt/wine-staging/bin
 
 
 # Google Cloud SDK.
@@ -80,5 +85,18 @@ source ~/google-cloud-sdk/completion.zsh.inc
 export JAVA_HOME=/usr/lib/jvm/default-java
 
 # Android
-export ANDROID_HOME=~/Documents/android
-PATH=$PATH:~/Documents/android/platform-tools
+export ANDROID_HOME=/media/zoli/22255023-3552-46c2-bafc-7c107a6c1441/android
+PATH=$PATH:/media/zoli/22255023-3552-46c2-bafc-7c107a6c1441/android/platform-tools
+
+# Kubernetes
+source <(kubectl completion zsh)
+
+# Cargo
+export PATH="$HOME/.cargo/bin:$PATH"
+
+# gperftools
+LD_LIBRARY_PATH=$LD_LIBRARY_PATH:~/.local/lib
+export LIBRARY_PATH=~/.local/lib
+
+
+. /home/zoli/Downloads/torch/install/bin/torch-activate
