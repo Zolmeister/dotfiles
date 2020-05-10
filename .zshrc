@@ -98,5 +98,3 @@ export PATH="$HOME/.cargo/bin:$PATH"
 LD_LIBRARY_PATH=$LD_LIBRARY_PATH:~/.local/lib
 export LIBRARY_PATH=~/.local/lib
 
-
-. /home/zoli/Downloads/torch/install/bin/torch-activate
