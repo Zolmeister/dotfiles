@@ -54,6 +54,10 @@ ln -s ~/zolmeister/dotfiles/zolmeister.zsh-theme ~/.oh-my-zsh/themes/zolmeister.
 echo "linking zsh config"
 ln -s ~/zolmeister/dotfiles/.zshrc ~/.zshrc
 
+# vim
+echo "installing Vim journal mode"
+ln -s ~/zolmeister/dotfiles/.vimrc ~/.vimrc
+
 # done
 TEST_CURRENT_SHELL=$(expr "$SHELL" : '.*/\(.*\)')
 if [ "$TEST_CURRENT_SHELL" != "zsh" ]; then
