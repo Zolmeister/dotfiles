@@ -1,7 +1,7 @@
-" TODO: backup to cloud (encrypted) - use Git here so that can't accidentally delete older versions (this phase creates a git commit)
-
+" Journal Mode - no clutter, never lose changes
 function! EnterJournalMode()
-		autocmd TextChanged,TextChangedI * :silent update
+		autocmd TextChanged,TextChangedI <buffer> :silent update
+		autocmd CursorHold,CursorHoldI <buffer> :call GitCommit()
     set noshowmode
     set noruler
     set laststatus=0
@@ -9,6 +9,11 @@ function! EnterJournalMode()
 		set shortmess=F
 		redraw
 		echo ""
+endfunction
+
+function GitCommit()
+    :silent !git commit -am'updated'
+		:redraw!
 endfunction
 
 nnoremap <S-j> :call EnterJournalMode()<CR>
