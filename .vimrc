@@ -1,7 +1,8 @@
 " Journal Mode - no clutter, never lose changes
 function! EnterJournalMode()
-		autocmd TextChanged,TextChangedI <buffer> :silent update
+		autocmd TextChangedI <buffer> :silent update
 		autocmd CursorHold,CursorHoldI <buffer> :call GitCommit()
+		set noswapfile
     set noshowmode
     set noruler
     set laststatus=0
