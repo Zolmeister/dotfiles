@@ -7,7 +7,7 @@ function! EnterJournalMode()
   set laststatus=0
   set noshowcmd
   set shortmess=F
-  highlight EndOfBuffer ctermfg=black ctermbg=black
+  highlight EndOfBuffer ctermfg=0
   redraw
   echo "jrnl_mode!"
 endfunction
