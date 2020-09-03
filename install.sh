@@ -1,10 +1,6 @@
 #!/bin/bash
 
-echo "Checking for required packages"
-hash nitrogen 2>/dev/null || {
-  echo >&2 "nitrogen is required.  Aborting."
-  exit 1
-}
+#echo "Checking for required packages"
 hash i3 2>/dev/null || {
   echo >&2 "i3 is required.  Aborting."
   exit 1
@@ -18,14 +14,10 @@ hash zsh 2>/dev/null || {
   exit 1
 }
 
-# wallpaper
-echo "setting wallpaper"
-nitrogen --set-centered ~/zolmeister/dotfiles/Z-bg.png
-
 # i3
 echo "linking i3 config"
-mkdir -p ~/.i3
-ln -s ~/zolmeister/dotfiles/i3/config ~/.i3/config
+mv ~/.config/i3/config ~/.config/i3/config.old
+ln -s ~/zolmeister/dotfiles/i3/config ~/.config/i3/config
 
 echo "restarting i3"
 i3-msg restart
@@ -53,10 +45,6 @@ ln -s ~/zolmeister/dotfiles/zolmeister.zsh-theme ~/.oh-my-zsh/themes/zolmeister.
 
 echo "linking zsh config"
 ln -s ~/zolmeister/dotfiles/.zshrc ~/.zshrc
-
-# vim
-echo "installing Vim journal mode"
-ln -s ~/zolmeister/dotfiles/.vimrc ~/.vimrc
 
 # done
 TEST_CURRENT_SHELL=$(expr "$SHELL" : '.*/\(.*\)')
